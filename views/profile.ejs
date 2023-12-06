@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+<link rel="stylesheet" href="/stylesheets/show.css">
+
+<%- include("partials/nav") %>
+<h1>Expense manager</h1>
+
+<form action="/search" method="POST">
+    <input type="search" name="tag" placeholder="Search by tag" id="">
+</form>
+<div class="expense"><h6>Total expense amount- <%= count%></h6></div>
+<hr>
+<div class="show-container">
+<% posts.forEach(function(p){%>
+    <div class="cards">
+Item - <%=p.item %> <br>
+Date - <%=p.date %> <br>
+Expense - <%=p.expense %> <br>
+Category - <%=p.category %> <br>
+Tag - <%=p.tag %> <br> <br>
+
+<a href="/delete/<%=p._id %>">Delete</a>
+<a href="/update/<%=p._id %>">Edit</a>
+
+</div>
+<% })%>
+</div>
+<%- include("partials/footer") %>

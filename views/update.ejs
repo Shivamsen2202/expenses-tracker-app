@@ -1,0 +1,18 @@
+<%- include("partials/header") %>
+
+<%- include("partials/nav") %>
+<h1>Edit Expense</h1>
+
+<form action="/update/<%= user._id%>" method="POST">
+
+    <input type="text" placeholder="Item" name="item" value="<%= user.item%>" class="form-control w-25 mb-3">
+
+  <input type="date" name="date" id="" class="form-control w-25 mb-3" value="<%= user.date%>">
+  <input type="number" name="expense" placeholder="Expense" id="" class="form-control w-25 mb-3" value="<%= user.expense%>">
+  <input type="text" placeholder="Category" name="category" class="form-control w-25 mb-3" value="<%= user.category%>">
+  <input type="text" placeholder="Tag" name="tag" class="form-control w-25 mb-3" value="<%= user.tag%>">
+    <button class="btn btn-success mb-3">Update</button>
+
+</form>
+
+<%- include("partials/footer") %>
