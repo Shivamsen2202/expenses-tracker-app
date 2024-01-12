@@ -1,4 +1,4 @@
-.show-container{
+.show-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -7,7 +7,7 @@
     padding-left: 10vmax;
 }
 
-.cards{
+.cards {
     box-shadow: 0 0 10px gray;
     width: 22vmax;
     height: 14vmax;
@@ -16,7 +16,23 @@
     text-align: center;
 }
 
-a{
+a {
     text-decoration: none;
-    
+}
+
+
+
+.btn {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+
+.show-container.show-container>.cards>.btn>a>button {
+    border-radius: 10px;
+    padding: 2px 2px;
+    color: red;
+    background-color: #fff;
+    margin-top: -18px;
 }
